@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="250" viewBox="0 0 980 250" role="img" aria-labelledby="title desc">
+  <title id="title">DreamAyla</title>
+  <desc id="desc">DreamAyla wordmark with an original A dream-trace symbol.</desc>
+  <g transform="translate(22 21)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M84 187C25 167 16 98 51 57C87 15 153 11 194 42C218 60 231 86 232 113" stroke="#A99DD5" stroke-width="19"/>
+    <path d="M84 187C107 137 129 86 153 39C159 27 170 27 176 39C201 86 223 137 246 187" stroke="#252B57" stroke-width="25"/>
+    <path d="M117 128C143 117 185 117 212 128" stroke="#252B57" stroke-width="21"/>
+    <path d="M232 113C237 138 231 160 216 178" stroke="#A99DD5" stroke-width="19"/>
+  </g>
+  <text x="302" y="166" fill="#252B57" font-family="Georgia, 'Times New Roman', serif" font-size="137" letter-spacing="-7">Dream</text>
+  <text x="666" y="166" fill="#6D35B5" font-family="Georgia, 'Times New Roman', serif" font-size="137" font-style="italic" letter-spacing="-10">Ayla</text>
+  <path d="M45 212C284 229 640 230 925 207" fill="none" stroke="#C8BCE7" stroke-width="4" stroke-linecap="round"/>
+</svg>

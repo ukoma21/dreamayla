@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="300" viewBox="0 0 1120 300" role="img" aria-labelledby="title desc">
+  <title id="title">DreamAyla</title>
+  <desc id="desc">The DreamAyla logo: a custom D, a quiet dream-trace line, and an integrated wordmark.</desc>
+  <g transform="translate(56 28)">
+    <!-- Custom D: a private place to keep a dream. -->
+    <path d="M0 4h58c78 0 126 48 126 119 0 76-53 121-135 121H0V4Zm51 45v150c48 0 79-27 79-77 0-44-29-73-73-73h-6Z" fill="#252B57"/>
+    <!-- The inward curve is the remembered thread, not a literal moon or eye. -->
+    <path d="M29 165c20-31 45-46 73-46 24 0 46 9 64 28" fill="none" stroke="#A99DD5" stroke-width="15" stroke-linecap="round"/>
+    <circle cx="24" cy="185" r="7.5" fill="#A99DD5"/>
+
+    <!-- The D becomes the first letter; the rest remains one compact word. -->
+    <text x="173" y="213" fill="#252B57" font-family="Georgia, 'Times New Roman', serif" font-size="174" letter-spacing="-11">ream</text>
+    <text x="590" y="213" fill="#252B57" font-family="Georgia, 'Times New Roman', serif" font-size="174" font-style="italic" letter-spacing="-15">Ayla</text>
+
+    <!-- One restrained line holds the whole mark together. -->
+    <path d="M10 261C250 280 634 280 972 254" fill="none" stroke="#A99DD5" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>

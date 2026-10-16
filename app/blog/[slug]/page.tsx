@@ -1,0 +1,1 @@
+import { Placeholder } from "@/components/placeholder-page";export default function Page(){return <Placeholder title="Dream reflection guide" copy="A considered guide to common dream questions, grounded in context and reflection."/>}

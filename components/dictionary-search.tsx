@@ -1,0 +1,168 @@
+"use client";
+
+import { ArrowRight, Search } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { FormEvent, useState } from "react";
+import { getDreamDictionaryEntry } from "@/lib/dream-dictionary";
+
+const aliases: Record<string, string> = {
+  "being chased": "being-chased",
+  chased: "being-chased",
+  "being robbed": "being-robbed",
+  robbed: "being-robbed",
+  "dream about being robbed": "being-robbed",
+  "someone steals from you": "being-robbed",
+  "stolen wallet": "being-robbed",
+  "stolen phone": "being-robbed",
+  "being shot": "being-shot",
+  shot: "being-shot",
+  "shot in a dream": "being-shot",
+  "car crash": "car-crash",
+  "car accident": "car-crash",
+  "dream about a car crash": "car-crash",
+  "car crash dream": "car-crash",
+  death: "death",
+  "dead person alive": "death",
+  "dead person alive in dream": "death",
+  "what is the meaning of dead person alive in dream": "death",
+  "dreaming of someone who died": "death",
+  "dreaming of someone who has died": "death",
+  "dreaming of a dead person being alive": "death",
+  "dreaming about someone who passed away": "death",
+  "talking to someone who died": "death",
+  "deceased loved one": "death",
+  ex: "dreaming-of-an-ex",
+  "an ex": "dreaming-of-an-ex",
+  "dreaming of an ex": "dreaming-of-an-ex",
+  "dream about someone": "dreaming-about-someone",
+  "dreaming about someone": "dreaming-about-someone",
+  "what does it mean when you dream about someone": "dreaming-about-someone",
+  "when you dream about someone what does that mean": "dreaming-about-someone",
+  "why do i keep dreaming about the same person": "dreaming-about-someone",
+  "dreaming about the same person": "dreaming-about-someone",
+  "dreaming about someone repeatedly": "dreaming-about-someone",
+  "when you dream about someone are they thinking of you": "dreaming-about-someone",
+  "dream about a stranger": "dreaming-about-someone",
+  "someone from the past": "dreaming-about-someone",
+  falling: "falling",
+  "falling dream": "falling",
+  fire: "fire",
+  "fire dream": "fire",
+  "fire dream meaning": "fire",
+  "dream of house on fire": "fire",
+  "dream about house on fire": "fire",
+  "house on fire dream meaning": "fire",
+  "burning house dream": "fire",
+  "childhood home on fire": "fire",
+  "escaping house fire": "fire",
+  "family in house fire": "fire",
+  family: "family",
+  "family dream": "family",
+  "family dream meaning": "family",
+  "dreaming of family": "family",
+  "family members": "family",
+  flying: "flying",
+  house: "house",
+  "being late": "late-for-something",
+  "late for something": "late-for-something",
+  "being late dream": "late-for-something",
+  "late for work": "late-for-something",
+  "late for school": "late-for-something",
+  "late for wedding": "late-for-something",
+  "late for flight": "late-for-something",
+  "unable to get ready": "late-for-something",
+  "lost phone": "losing-your-phone",
+  "losing your phone": "losing-your-phone",
+  "losing hair": "losing-hair",
+  "hair falling out": "losing-hair",
+  "dream interpretation losing hair": "losing-hair",
+  "bald dream": "losing-hair",
+  "missing a train": "missing-a-train",
+  "missed train": "missing-a-train",
+  "naked in public": "naked-in-public",
+  pregnancy: "pregnancy",
+  school: "school",
+  "school dream": "school",
+  "back at school": "school",
+  "returning to school": "school",
+  "being trapped": "trapped",
+  "trapped dream": "trapped",
+  "locked in a room": "trapped",
+  "stuck in an elevator": "trapped",
+  "cannot escape": "trapped",
+  "unable to scream": "unable-to-scream",
+  "cannot scream": "unable-to-scream",
+  "can t scream": "unable-to-scream",
+  "dreaming screaming": "unable-to-scream",
+  "scream no sound": "unable-to-scream",
+  "unable to speak": "unable-to-scream",
+  snake: "snake",
+  snakes: "snake",
+  spider: "spider",
+  spiders: "spider",
+  teeth: "teeth-falling-out",
+  "teeth falling out": "teeth-falling-out",
+  trapped: "trapped",
+  wedding: "wedding",
+  water: "water",
+  flood: "flood",
+  flooding: "flood",
+  "flood dream": "flood",
+  "flood dream meaning": "flood",
+  "dream about flooding": "flood",
+  "flooded house": "flood",
+  "house flooding": "flood",
+  "rising flood water": "flood",
+  "escaping a flood": "flood",
+  tornado: "tornado",
+  tornadoes: "tornado",
+  "tornado dream": "tornado",
+  "tornado dream meaning": "tornado",
+  "dreaming of a tornado": "tornado",
+  "dreaming about a tornado": "tornado",
+  "taking shelter from tornado": "tornado",
+  "tornado hits house": "tornado",
+  earthquake: "earthquake",
+  earthquakes: "earthquake",
+  "earthquake dream": "earthquake",
+  "earthquake dream meaning": "earthquake",
+  "dreaming of an earthquake": "earthquake",
+  "shaking ground": "earthquake",
+  "building collapse": "earthquake",
+  "surviving an earthquake": "earthquake",
+  money: "money",
+  "money dream": "money",
+  "money dream meaning": "money",
+  "dreaming about money": "money",
+  "finding money": "money",
+  "losing money": "money",
+  "receiving money": "money",
+  "counting money": "money",
+  "giving money": "money",
+  "fake money": "money",
+  poop: "falling",
+};
+
+function normalize(value: string) {
+  return value.trim().toLocaleLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+}
+
+export function DictionarySearch() {
+  const router = useRouter();
+  const [query, setQuery] = useState("");
+
+  function search(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const normalized = normalize(query);
+    if (!normalized) return;
+    const slug = aliases[normalized] ?? normalized.replaceAll(" ", "-");
+    const entry = getDreamDictionaryEntry(slug);
+    router.push(entry ? `/dream-dictionary/${entry.slug}` : `/dreams/${encodeURIComponent(slug)}`);
+  }
+
+  return <form className="dictionary-search" onSubmit={search} role="search">
+    <Search className="icon" size={20} aria-hidden="true" />
+    <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search a dream situation…" aria-label="Search a dream situation" />
+    <button type="submit" disabled={!query.trim()} aria-label="Browse dream guides">Browse guides <ArrowRight size={14} /></button>
+  </form>;
+}

@@ -1,0 +1,1 @@
+import { Footer,Header } from "@/components/site-chrome";import { AuthForm } from "@/components/auth-form";export default function Login(){return <><Header/><main className="page shell"><AuthForm mode="login"/></main><Footer/></>}

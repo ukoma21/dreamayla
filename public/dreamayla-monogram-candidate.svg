@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">DreamAyla A monogram</title>
+  <desc id="desc">A rounded A monogram joined to a single orbiting dream trace.</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- The orbit begins at the A, so it is a letter stroke rather than decoration. -->
+    <path d="M124 390C54 358 32 268 64 188C101 96 199 59 282 101C335 128 365 179 367 230" stroke="#A99DD5" stroke-width="34"/>
+    <!-- One rounded A, drawn as a calm continuous gesture. -->
+    <path d="M124 390C163 299 196 212 238 125C247 106 265 106 274 125C317 213 349 300 388 390" stroke="#252B57" stroke-width="42"/>
+    <!-- A single soft bridge makes the character readable without becoming an eye. -->
+    <path d="M177 290C223 273 281 273 329 290" stroke="#252B57" stroke-width="36"/>
+    <!-- The orbit resolves inside the right stroke: one deliberate fusion point. -->
+    <path d="M367 230C372 270 362 311 334 344" stroke="#A99DD5" stroke-width="34"/>
+  </g>
+</svg>

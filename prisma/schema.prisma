@@ -1,0 +1,143 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model User {
+  id           String              @id @default(cuid())
+  email        String              @unique
+  createdAt    DateTime            @default(now())
+  credits      CreditTransaction[]
+  dreams       Dream[]
+  patterns     DreamPattern[]
+  subscription Subscription?
+}
+
+model Dream {
+  id         String         @id @default(cuid())
+  userId     String?
+  title      String?
+  rawContent String
+  summary    String?
+  language   String         @default("en")
+  mood       String?
+  parserData Json?
+  report     Json?
+  createdAt  DateTime       @default(now())
+  updatedAt  DateTime       @updatedAt
+  user       User?          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  emotions   DreamEmotion[]
+  symbols    DreamSymbol[]
+}
+
+model DreamSymbol {
+  id             String  @id @default(cuid())
+  dreamId        String
+  name           String
+  category       String?
+  importance     Int     @default(0)
+  frequency      Int     @default(1)
+  interpretation String?
+  dream          Dream   @relation(fields: [dreamId], references: [id], onDelete: Cascade)
+}
+
+model DreamEmotion {
+  id      String @id @default(cuid())
+  dreamId String
+  name    String
+  score   Int
+  dream   Dream  @relation(fields: [dreamId], references: [id], onDelete: Cascade)
+}
+
+model DreamPattern {
+  id        String   @id @default(cuid())
+  userId    String
+  type      String
+  name      String
+  frequency Int      @default(1)
+  score     Int      @default(0)
+  firstSeen DateTime @default(now())
+  lastSeen  DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, type, name])
+}
+
+model DreamConversation {
+  id        String   @id @default(cuid())
+  userId    String
+  dreamId   String?
+  messages  Json
+  createdAt DateTime @default(now())
+}
+
+model Subscription {
+  id                   String             @id @default(cuid())
+  userId               String             @unique
+  plan                 Plan               @default(FREE)
+  billingPlan          String?
+  status               SubscriptionStatus @default(ACTIVE)
+  paypalSubscriptionId String?            @unique
+  currentPeriodStart   DateTime?
+  currentPeriodEnd     DateTime?
+  cancelAtPeriodEnd    Boolean            @default(false)
+  user                 User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model CreditTransaction {
+  id        String   @id @default(cuid())
+  userId    String
+  amount    Int
+  type      String
+  metadata  Json?
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Payment {
+  id              String   @id @default(cuid())
+  userId          String?
+  paypalPaymentId String   @unique
+  amount          Int
+  currency        String
+  status          String
+  createdAt       DateTime @default(now())
+}
+
+model SEOPage {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  description String
+  content     Json
+  published   Boolean  @default(false)
+  updatedAt   DateTime @updatedAt
+}
+
+model BlogPost {
+  id          String    @id @default(cuid())
+  slug        String    @unique
+  title       String
+  excerpt     String
+  content     String
+  publishedAt DateTime?
+  updatedAt   DateTime  @updatedAt
+}
+
+enum Plan {
+  FREE
+  PREMIUM
+  ANNUAL
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  CANCELED
+  PAST_DUE
+  INCOMPLETE
+}

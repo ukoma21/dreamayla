@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">DreamAyla</title>
+  <defs>
+    <linearGradient id="bg" x1="12" y1="8" x2="117" y2="122" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#30235C"/>
+      <stop offset=".54" stop-color="#6533A8"/>
+      <stop offset="1" stop-color="#B767D7"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="34" fill="url(#bg)"/>
+  <path d="M35 98C14 88 13 57 29 37C47 15 79 14 99 30C111 40 116 55 114 68" fill="none" stroke="#E9D7FF" stroke-width="9" stroke-linecap="round"/>
+  <path d="M35 98 61 38c2-5 5-5 7 0l26 60M48 72c10-4 22-4 32 0" fill="none" stroke="#FFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M114 68c0 11-4 20-11 27" fill="none" stroke="#E9D7FF" stroke-width="9" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,15 @@
+node_modules
+.next
+.env*
+!.env.example
+.vercel
+.artifact-build
+outputs
+work
+*.tsbuildinfo
+docs/seo-assets/
+public/seo-assets/
+public/dreamayla-ayla.png
+public/dreamayla-ayla-transparent.png
+docs/
+DEPLOYMENT.md

@@ -1,0 +1,1 @@
+import { Placeholder } from "@/components/placeholder-page";export default function Page(){return <Placeholder title="Settings" copy="Manage your profile, privacy preferences, subscription, and data."/>}
