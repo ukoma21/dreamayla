@@ -6,11 +6,11 @@ import { Footer, Header } from "@/components/site-chrome";
 import { getDreamDictionaryEntry } from "@/lib/dream-dictionary";
 
 export const metadata: Metadata = {
-  title: "Common Dreams and Their Meanings",
-  description: "Explore common dreams and their possible meanings, including being chased, falling, flying, teeth falling out, water, snakes, relationships, and recurring dreams.",
-  keywords:["common dreams","common dream meanings","recurring dreams","dreaming about falling","dreaming about being chased","teeth falling out dream","dream meaning"],
+  title: "24 Common Dreams and Their Meanings",
+  description: "What do common dreams mean? Explore 24 familiar themes—including being chased, falling, teeth, water, animals, and relationships—without fixed answers.",
+  keywords:["common dreams and their meanings","most common dreams and what they mean","common recurring dreams","common dreams list","dreaming about falling","dreaming about being chased","teeth falling out dream","dream meaning"],
   alternates: { canonical: "/common-dreams" },
-  openGraph: { title: "Common Dreams — Shared Archetypes, Personal Meaning | DreamAyla", description: "The dreams we share can reveal human themes. Your life gives them their meaning.", url: "/common-dreams", type: "website" },
+  openGraph: { title: "24 Common Dreams and Their Meanings | DreamAyla", description: "Explore familiar dream themes, what they may reflect, and why your feeling and waking-life context matter more than a fixed answer.", url: "/common-dreams", type: "website" },
 };
 
 type DreamLink = [string, string, string];
@@ -56,10 +56,22 @@ const categories: Category[] = [
 ];
 
 const questions = [
+  ["What are the most common dreams?", "Frequently reported themes include being chased, falling, teeth falling out, flying, water, missing transport, being late, public exposure, and dreams about relationships. A familiar scene still needs your emotion and waking-life context to become personally useful."],
+  ["What do common dreams mean?", "Common dreams can picture shared human concerns such as safety, control, belonging, change, visibility, and connection. The most useful meaning depends on what happened, how you felt, and what the scene resembles in your life now."],
   ["What is a dream dictionary?", "A dream dictionary is a starting point for exploring recurring symbols and situations. It offers possible associations, not one fixed answer."],
   ["Why can the same dream mean different things?", "The emotion, action, memory, relationships, and current circumstances around a dream can change the most useful interpretation."],
+  ["Are common dreams universal?", "Many themes appear across cultures, but their meaning is not universal. Personal memories, cultural background, current stressors, and the dream's emotional tone can change the reading."],
   ["Can common dreams predict the future?", "No. Dreams are subjective experiences for reflection. They do not reliably predict events or diagnose mental or physical health conditions."],
   ["How do I get a more personal reading?", "Start with a guide, then describe the whole scene in DreamAyla's interpreter. Your own context gives the symbol a more specific direction."],
+];
+
+const popularDreams: Array<[string, string]> = [
+  ["being-chased", "Being chased"],
+  ["falling", "Falling"],
+  ["teeth-falling-out", "Teeth falling out"],
+  ["water", "Water"],
+  ["dreaming-about-someone", "Dreaming about someone"],
+  ["missing-a-train", "Missing a train"],
 ];
 
 function dreamGuideHref(slug: string) {
@@ -96,11 +108,18 @@ export default function SharedDreamsPage() {
           acceptedAnswer: { "@type": "Answer", text: answer },
         })),
       },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "DreamAyla", item: baseUrl },
+          { "@type": "ListItem", position: 2, name: "Common Dreams and Their Meanings", item: `${baseUrl}/common-dreams` },
+        ],
+      },
     ],
   };
   return <><Header /><main className="common-dictionary-page"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(commonDreamsSchema) }} />
-    <section className="common-dictionary-hero"><div className="shell"><div className="common-breadcrumb"><Link href="/">DreamAyla</Link><span>/</span><span>Common Dreams</span></div><div className="common-dictionary-heading"><span className="eyebrow">SHARED DREAMS · PERSONAL MEANING</span><h1>The dreams we share.<br /><em>The meaning only you can give them.</em></h1><p>Falling. Flying. Being chased. Arriving too late. These images cross cultures and generations—but your emotion, memory, and waking life make the dream your own.</p><DictionarySearch /></div></div></section>
-    <section className="shell common-dictionary-intro"><div className="common-intro-copy"><span className="eyebrow">HUMAN PATTERNS · PERSONAL STORIES</span><h2>Familiar does not mean universal.</h2><p>Common dreams may carry archetypal themes—belonging, change, vulnerability, freedom, loss, or renewal. The DreamAyla Method begins with that shared pattern, then returns the meaning to the person who dreamed it.</p></div><div className="common-intro-panels"><article><BookOpen size={20}/><h3>The collective pattern</h3><p>Discover the symbolic and archetypal themes people have recognized across time.</p></article><article><Heart size={20}/><h3>Your personal version</h3><p>Notice how your emotion, history, and present circumstances transform the dream.</p></article></div></section>
+    <section className="common-dictionary-hero"><div className="shell"><div className="common-breadcrumb"><Link href="/">DreamAyla</Link><span>/</span><span>Common Dreams</span></div><div className="common-dictionary-heading"><span className="eyebrow">24 COMMON DREAMS · POSSIBLE MEANINGS</span><h1>24 Common Dreams<br /><em>and Their Meanings</em></h1><p>Common dreams often picture shared human concerns—safety, control, belonging, change, visibility, and connection. Their meaning depends on what happened, how you felt, and what is changing in your waking life.</p><DictionarySearch /><nav className="common-popular-links" aria-label="Popular common dream meanings"><span>Popular meanings</span>{popularDreams.map(([slug, label]) => <Link href={`/dream-dictionary/${slug}`} key={slug}>{label}</Link>)}</nav></div></div></section>
+    <section className="shell common-dictionary-intro"><div className="common-intro-copy"><span className="eyebrow">HUMAN PATTERNS · PERSONAL STORIES</span><h2>What do common dreams mean?</h2><p>A common dream can point toward a shared concern—pressure, vulnerability, freedom, loss, renewal, or connection—without carrying one universal message. Begin with the scene below, then use your emotion, memories, and waking-life circumstances to test which possibility fits.</p></div><div className="common-intro-panels"><article><BookOpen size={20}/><h3>The collective pattern</h3><p>Discover the symbolic and archetypal themes people have recognized across time.</p></article><article><Heart size={20}/><h3>Your personal version</h3><p>Notice how your emotion, history, and present circumstances transform the dream.</p></article></div></section>
     <section className="shell common-dictionary-browse"><div className="common-browse-head"><div><span className="eyebrow">ARCHETYPES IN EVERYDAY DREAMS</span><h2>Find the human theme beneath the scene.</h2></div><span className="common-count">24 original guides</span></div><nav className="common-category-nav" aria-label="Dream guide categories">{categories.map(([id,title])=><a href={`#${id}`} key={id}>{title}<ArrowRight size={14}/></a>)}</nav><div className="common-category-grid">{categories.map(([id,title,description,Icon,dreams])=><section className="common-category-card" id={id} key={id}><div className="common-category-top"><Icon size={22}/><span>{String(dreams.length).padStart(2,"0")} GUIDES</span></div><h3>{title}</h3><p>{description}</p><div className="common-dream-links">{dreams.map(([slug,label,copy])=><Link href={dreamGuideHref(slug)} key={slug}><span><b>{label}</b><small>{copy}</small></span><ArrowRight size={16}/></Link>)}</div></section>)}</div></section>
     <section className="common-dictionary-note"><div className="shell"><div><span className="eyebrow">A COMMON IMAGE IS NEVER A COMMON ANSWER</span><h2>The difference lives in the details.</h2><p>Was the water calm or rising? Did falling feel terrifying or freeing? Were you escaping—or choosing to stay? That is where a shared archetype becomes your story.</p></div><Link className="button" href="/dream-interpreter">Interpret my version <ArrowRight size={16}/></Link></div></section>
     <section className="shell common-dictionary-faq"><div className="common-faq-intro"><span className="eyebrow">REFLECTION WITHOUT CERTAINTY</span><h2>Keep the reading open and grounded.</h2><p>Common dreams can reveal questions worth exploring. They are not predictions, diagnoses, or proof that one interpretation must be true.</p></div><div className="common-faq-list">{questions.map(([question,answer])=><details key={question}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div></section>
