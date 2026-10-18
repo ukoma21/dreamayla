@@ -29,12 +29,15 @@ Primary market: United States, English
 - Generated today's original 1024 × 1536 Common Dreams Pinterest visual and published the non-duplicate Pin to the existing DreamAyla board. Metricool confirms `PUBLISHED`: `https://www.pinterest.es/pin/1149543873669798290`.
 - Published a separate Common Dreams discovery post from `@Liam_Harrison9` with tracked organic-social parameters and verified the public post: `https://x.com/Liam_Harrison9/status/2111430357375717690`.
 
-## In progress on Oct 18
+## Completed on Oct 18
 
 - Refreshed the authenticated 28-day Search Console report through Oct 15: 1 click, 1,610 impressions, 0.1% CTR, and average position 48.6. Compared with the Oct 16 snapshot, impressions increased by 101 (+6.7%), clicks were flat, and average position improved by 0.1.
 - Validated live-result overlap between snake attack, snake bite, chasing, lunging, venom, survival, and recurring-attack searches; rejected a duplicate `/snake-attack` URL.
 - Substantially upgraded `/dream-dictionary/snake-bite` to own the combined Snake Bite and Attack intent and added a reciprocal Being Chased link.
-- `git diff --check`, lint, and the 166-route production build passed. An original 1024 × 1536 Pinterest visual and distinct post copy are ready; deployment, public verification, and publication are pending final action confirmation.
+- `git diff --check`, lint, and the 166-route production build passed. Private GitHub commit `31340770361e656a1b9ba33f249a7df74915f464` triggered production deployment `dpl_BfFbCST7pQzcYoezannuVZ1KqiK1`, which is READY and aliased to `dreamayla.com`.
+- Public verification passed for HTTP 200, updated title/H1 and description, self-canonical, indexability, FAQ/Breadcrumb schemas, the attack-without-bite scenario, reciprocal Being Chased link, robots, one sitemap entry, and the 2026-10-18 last-modified signal.
+- Published the original 1024 × 1536 Snake Bite and Attack Pin with one tracked canonical destination and accessible alt text. Metricool confirms `PUBLISHED`: `https://www.pinterest.es/pin/1149543873669872763`.
+- Did not repeat a Search Console indexing request for this existing canonical; the refreshed sitemap date and reciprocal link support natural recrawl.
 
 ## Completed on Oct 15
 
