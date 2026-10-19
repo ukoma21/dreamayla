@@ -1,6 +1,6 @@
 # DreamAyla SEO status
 
-Last updated: 2026-10-19  
+Last updated: 2026-10-20  
 Automation: `DreamAyla 每日全链路 SEO` — active, scheduled daily at 09:00 Asia/Shanghai  
 Primary market: United States, English
 
@@ -8,13 +8,24 @@ Primary market: United States, English
 
 | Item | Status |
 |---|---|
-| Canonical Dream Dictionary guides | 38 live guides; Recurring Dreams owns the overlapping same-dream/repeated-dream intent; Snake Bite also owns Snake Attack; Missing a Train and Trapped remain in observation windows |
+| Canonical Dream Dictionary guides | 39 live guides; Nightmare owns broad bad-dream meaning and support-aware guidance, while Recurring Dreams owns repeated-dream intent; Snake Bite also owns Snake Attack; Missing a Train and Trapped remain in observation windows |
 | Dictionary collection schema | Live; automatically lists all canonical guides |
 | Legacy duplicate handling | Matching legacy `/dreams/` pages use `noindex, follow`, canonical to the Dictionary guide, and are excluded from the sitemap |
 | Sitemap | Live and automatically includes published Dictionary entries |
 | Daily execution roadmap | Active from 2026-09-26 through 2026-10-29 |
 | Month-two roadmap | Prepared for 2026-10-30 through 2026-11-28; Semrush and Ahrefs evidence recorded |
 | Daily evidence logs | Stored in `docs/seo-log/YYYY-MM-DD.md` |
+
+## Completed on Oct 20
+
+- Refreshed the authenticated 28-day Search Console report through Oct 17: **1 click, 1,720 impressions, 0.1% CTR, and average position 49.0**. Compared with the last verified 1,610-impression snapshot, impressions increased by 110 (+6.8%), clicks remained flat, and the 0.4-position movement is treated as normal broad-query expansion rather than a proven ranking trend.
+- Validated Nightmare as a distinct educational intent from Recurring Dreams using live English results for nightmare meaning, why nightmares happen, recurring bad dreams, vivid nightmares, and common nightmare scenarios. Third-party Volume, KD, CPC, and Traffic Potential remain unverified where no value was visibly returned.
+- Published `/dream-dictionary/nightmare` with answer-first guidance, eight scenario answers, three interpretive lenses, reflection prompts, explicit non-prediction language, and a careful boundary for recurring distress or sleep disruption.
+- Added Dictionary/search discovery and reciprocal links with Recurring Dreams, Being Chased, Trapped, and Unable to Scream; retained direct Interpreter and Journal paths.
+- `git diff --check`, lint, and the 168-route production build passed. The corrected private GitHub commit `38ce3a3803996f795d4945757dbe8331c5354700` deployed successfully through Vercel after the first connector upload was repaired.
+- Public verification passed for HTTP 200, title and description, self-canonical, `index, follow`, FAQ/Breadcrumb schema, internal links, robots, and a single sitemap entry with `lastmod` 2026-10-20.
+- Requested indexing once in Search Console. Google confirmed that the URL was added to the priority crawl queue; do not submit it again unless its indexing status materially changes.
+- Published an original, AI-disclosed Pinterest Pin with accessible alt text and one tracked destination to the Nightmare canonical: `https://www.pinterest.com/pin/1149543873670009562/`.
 
 ## Completed on Oct 17
 
@@ -208,12 +219,12 @@ Primary market: United States, English
 
 ## Next execution
 
-Date: 2026-10-20
+Date: 2026-10-21
 
-1. Validate `nightmare meaning` and `why do I have nightmares` against live SERPs and accessible Semrush/Ahrefs evidence; approve one careful educational canonical only if the intent is distinct from Recurring Dreams.
-2. If the Nightmare intent is not sufficiently distinct, upgrade the stronger Car Crash or Being Chased near-win instead of creating a thin page.
-3. Keep Trapped and Missing a Train stable long enough to measure their recent snippet changes.
-4. Link any approved Nightmare guide to Recurring Dreams, Being Chased, Trapped, and the Interpreter; do not turn health or trauma language into a diagnosis.
+1. Validate `lucid dream meaning`, `what is a lucid dream`, and `how to lucid dream` intent without competing with the existing Dream Interpreter; prefer one educational canonical only if live results show a distinct information need.
+2. Recheck Car Crash and Being Chased as first-party near-win candidates; upgrade the stronger current opportunity if Lucid Dream lacks clear differentiation or safe scope.
+3. Review Nightmare discovery and sitemap recognition without repeating its Search Console request.
+4. Keep Trapped and Missing a Train stable long enough to measure their recent snippet changes.
 
 ## Month-two research prepared on Oct 9
 
