@@ -1,6 +1,6 @@
 # DreamAyla SEO status
 
-Last updated: 2026-10-18  
+Last updated: 2026-10-19  
 Automation: `DreamAyla 每日全链路 SEO` — active, scheduled daily at 09:00 Asia/Shanghai  
 Primary market: United States, English
 
@@ -8,7 +8,7 @@ Primary market: United States, English
 
 | Item | Status |
 |---|---|
-| Canonical Dream Dictionary guides | 37 live guides; Snake Bite now also owns the overlapping Snake Attack intent; Missing a Train and Trapped remain in observation windows; Ocean and Flood remain distinct Water-cluster canonicals; Fire and Death remain consolidated canonicals |
+| Canonical Dream Dictionary guides | 38 live guides; Recurring Dreams owns the overlapping same-dream/repeated-dream intent; Snake Bite also owns Snake Attack; Missing a Train and Trapped remain in observation windows |
 | Dictionary collection schema | Live; automatically lists all canonical guides |
 | Legacy duplicate handling | Matching legacy `/dreams/` pages use `noindex, follow`, canonical to the Dictionary guide, and are excluded from the sitemap |
 | Sitemap | Live and automatically includes published Dictionary entries |
@@ -28,6 +28,17 @@ Primary market: United States, English
 - Verified the Oct 16 Missing a Train Pinterest Pin as publicly published: `https://www.pinterest.es/pin/1149543873669704843`.
 - Generated today's original 1024 × 1536 Common Dreams Pinterest visual and published the non-duplicate Pin to the existing DreamAyla board. Metricool confirms `PUBLISHED`: `https://www.pinterest.es/pin/1149543873669798290`.
 - Published a separate Common Dreams discovery post from `@Liam_Harrison9` with tracked organic-social parameters and verified the public post: `https://x.com/Liam_Harrison9/status/2111430357375717690`.
+
+## Completed on Oct 19
+
+- Search Console browser control could not attach, so no fresh metric was claimed. The latest verified 28-day baseline remains 1 click, 1,610 impressions, 0.1% CTR, and average position 48.6 through Oct 15.
+- Validated the distinct Recurring Dreams educational intent using live searches for recurring dreams, the same dream returning, repeated dreams, and recurring nightmares; all third-party metrics not visibly returned remain marked unverified.
+- Published `/dream-dictionary/recurring-dreams` as the single canonical for this query group, covering eight real scenarios without creating a duplicate `same dream over and over` page.
+- Added Interpreter, Journal, five related-guide links, and reciprocal discovery from Being Chased, Dreaming About Your Ex, Teeth Falling Out, and Being Lost.
+- `git diff --check`, lint, and the 167-route production build passed. Private GitHub commit `99efc255abacd080d581f2cdd84404c360fae350` deployed through Vercel production deployment `dpl_6SGEbqYubybZeehqGoxuVu8fok72`, which is READY.
+- Public verification passed for HTTP 200, title/H1/description, self-canonical, indexability, WebPage/FAQ/Breadcrumb schemas, internal links, robots, and one sitemap entry with `lastmod` 2026-10-19.
+- Generated an original 1024 × 1536 Recurring Dreams Pinterest visual and queued one non-duplicate tracked Pin through Metricool post `399652465` / UUID `-2146680248907247720` for auto-publication at 13:47 Asia/Shanghai.
+- One Search Console indexing request remains pending because browser control could not attach. Do not submit the new URL more than once.
 
 ## Completed on Oct 18
 
@@ -197,12 +208,12 @@ Primary market: United States, English
 
 ## Next execution
 
-Date: 2026-10-19
+Date: 2026-10-20
 
-1. Compare the latest Car Crash and Being Chased query/page evidence and upgrade only the stronger near-win; do not create a duplicate canonical.
-2. Keep Trapped and Missing a Train stable long enough to measure their latest snippets, and review whether their positions and CTR changed.
-3. Re-query Missing Flight, Losing Phone, and Recurring Dreams in authenticated Semrush/Ahrefs before approving one conditional new canonical.
-4. Review the Oct 18 Snake Pin and the updated Snake canonical without repeating its visual, anchor text, or external copy.
+1. Validate `nightmare meaning` and `why do I have nightmares` against live SERPs and accessible Semrush/Ahrefs evidence; approve one careful educational canonical only if the intent is distinct from Recurring Dreams.
+2. If the Nightmare intent is not sufficiently distinct, upgrade the stronger Car Crash or Being Chased near-win instead of creating a thin page.
+3. Keep Trapped and Missing a Train stable long enough to measure their recent snippet changes.
+4. Link any approved Nightmare guide to Recurring Dreams, Being Chased, Trapped, and the Interpreter; do not turn health or trauma language into a diagnosis.
 
 ## Month-two research prepared on Oct 9
 
