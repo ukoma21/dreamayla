@@ -38,7 +38,7 @@ Primary market: United States, English
 - `git diff --check`, lint, and the 167-route production build passed. Private GitHub commit `99efc255abacd080d581f2cdd84404c360fae350` deployed through Vercel production deployment `dpl_6SGEbqYubybZeehqGoxuVu8fok72`, which is READY.
 - Public verification passed for HTTP 200, title/H1/description, self-canonical, indexability, WebPage/FAQ/Breadcrumb schemas, internal links, robots, and one sitemap entry with `lastmod` 2026-10-19.
 - Generated an original 1024 × 1536 Recurring Dreams Pinterest visual and published one non-duplicate tracked Pin. Metricool confirms `PUBLISHED`: `https://www.pinterest.es/pin/1149543873669969669`.
-- One Search Console indexing request remains pending because browser control could not attach. Do not submit the new URL more than once.
+- The site owner confirmed that the Recurring Dreams canonical was submitted to Search Console once. Do not submit it again unless its indexing status materially changes.
 
 ## Completed on Oct 18
 
