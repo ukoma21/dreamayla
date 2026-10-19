@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: entry.metaTitle,
     description: entry.metaDescription,
-    keywords: [entry.keyword, `${entry.title.toLowerCase()} interpretation`, "dream symbolism", "Jungian dream perspective", "dream dictionary"],
+    keywords: [entry.keyword, ...entry.cluster, `${entry.title.toLowerCase()} interpretation`, "dream symbolism", "Jungian dream perspective", "dream dictionary"],
     alternates: { canonical },
     openGraph: { type: "article", title: entry.metaTitle, description: entry.metaDescription, url: canonical },
     twitter: { card: "summary_large_image", title: entry.metaTitle, description: entry.metaDescription }
@@ -86,7 +86,7 @@ export default async function DreamDictionaryDetailPage({ params }: Props) {
       {clusterChildren.length > 0 && <section><div className="eyebrow">TOPIC CLUSTER</div><h2>Explore this theme in more detail</h2><div className="related-links">{clusterChildren.map((item) => <Link key={item.slug} href={`/dream-dictionary/${item.slug}`}>{item.title}<ArrowRight size={15} /></Link>)}</div></section>}
       {related.length > 0 && <section><div className="eyebrow">RELATED DREAMS</div><h2>Continue exploring</h2><div className="related-links">{related.map((item) => <Link key={item.slug} href={`/dream-dictionary/${item.slug}`}>{item.title}<ArrowRight size={15} /></Link>)}</div></section>}
 
-      <section className="card"><Sparkles size={21} /><div><div className="eyebrow">YOUR DREAM IS MORE PERSONAL THAN A SYMBOL</div><h2>Interpret your dream with Ayla</h2><p>A snake, spider, or body of water can carry many meanings. What it means in your dream depends on what happened, how you felt, and what is unfolding in your life.</p><Link className="button" href="/dream-interpreter">Interpret My Dream with Ayla <ArrowRight size={16} /></Link></div></section>
+      <section className="card"><Sparkles size={21} /><div><div className="eyebrow">YOUR DREAM IS MORE PERSONAL THAN A SYMBOL</div><h2>Interpret your dream with Ayla</h2><p>A repeated scene or familiar symbol can carry many meanings. What it means in your dream depends on what happened, how you felt, and what is unfolding in your life.</p><div className="dictionary-entry-actions"><Link className="button" href="/dream-interpreter">Interpret My Dream with Ayla <ArrowRight size={16} /></Link><Link className="text-link" href="/dream-journal">Track the dream in your journal <ArrowRight size={15} /></Link></div></div></section>
     </article>
   </main><Footer /></>;
 }
