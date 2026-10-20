@@ -1,12 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import "./library-pages.css";
 import "./ui-overrides.css";
 import "./poop-page.css";
 import { LocaleProvider } from "@/components/locale-provider";
 import { MembershipProvider } from "@/components/membership-provider";
+import { CookieConsent } from "@/components/cookie-consent";
 const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://dreamayla.com";
 export const metadata: Metadata = {
   metadataBase:new URL(appUrl),
@@ -38,5 +37,5 @@ export default function RootLayout({children}:{children:React.ReactNode}) {
     {"@type":"Organization","@id":`${appUrl}/#organization`,name:"DreamAyla",url:appUrl,logo:`${appUrl}/icon.svg`,description:"A private dream practice bringing together ancient symbolism, Jungian-inspired psychology, and personal insight."},
     {"@type":"WebSite","@id":`${appUrl}/#website`,name:"DreamAyla",url:appUrl,inLanguage:"en",publisher:{"@id":`${appUrl}/#organization`},description:"Dream interpretation, dream meanings, symbolism, Jungian-inspired psychology, and personal insight through the DreamAyla Three-Lens Method."}
   ]};
-  return <html lang="en"><body><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/><LocaleProvider initialLocale="en"><MembershipProvider>{children}</MembershipProvider></LocaleProvider><SpeedInsights /><Script id="metricool-tracker" strategy="afterInteractive">{`function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"165876f9df16cd334c0314de0708db79"})});`}</Script></body></html>;
+  return <html lang="en"><body><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/><LocaleProvider initialLocale="en"><MembershipProvider>{children}</MembershipProvider></LocaleProvider><CookieConsent /></body></html>;
 }
