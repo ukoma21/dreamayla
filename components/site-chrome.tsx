@@ -6,6 +6,7 @@ import { ArrowRight, Menu, Sparkles, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useLocale } from "@/components/locale-provider";
 import { getBrowserSession, supabaseBrowser } from "@/lib/supabase/client";
+import { CookieSettingsButton } from "@/components/cookie-consent";
 
 const navigation = [
   ["Explore", "/tools"],
@@ -88,7 +89,7 @@ export function Header() {
 export function Footer() {
   return <footer className="footer">
     <div className="shell footer-invitation"><div><span><Sparkles size={14} /> SYMBOL · PSYCHE · SELF</span><h2>Begin with the detail that stayed.</h2><p>Your first complete interpretation through the DreamAyla Method is free.</p></div><Link href="/dream-interpreter" className="button footer-invitation-cta">Interpret My Dream <ArrowRight size={16} /></Link></div>
-    <div className="shell footer-main"><div className="footer-brand"><Link className="brand" href="/"><img className="brand-logo" src="/dreamayla-brand.svg" alt="DreamAyla" /></Link><p>Where ancient symbolic wisdom, Jungian-inspired psychology, and your inner world meet.</p><span>Private by design · First complete reading free</span></div><div className="footer-column"><b>Explore</b><Link href="/dream-interpreter">Dream Interpretation</Link><Link href="/dream-dictionary">Dream Dictionary</Link><Link href="/dream-library">Dream Library</Link><Link href="/common-dreams">Common Dreams</Link></div><div className="footer-column"><b>Your practice</b><Link href="/dream-journal">Dream Journal</Link><Link href="/dream-patterns">Dream Patterns</Link><Link href="/dream-dna">Dream DNA</Link><Link href="/dream-coach">Ayla Dream Guide</Link></div><div className="footer-column"><b>More from DreamAyla</b><Link href="/tools">Meaningful Names</Link><Link href="/pricing">Membership</Link><Link href="/about">Our Method</Link><Link href="/privacy">Privacy</Link></div></div>
+    <div className="shell footer-main"><div className="footer-brand"><Link className="brand" href="/"><img className="brand-logo" src="/dreamayla-brand.svg" alt="DreamAyla" /></Link><p>Where ancient symbolic wisdom, Jungian-inspired psychology, and your inner world meet.</p><span>Private by design · First complete reading free</span></div><div className="footer-column"><b>Explore</b><Link href="/dream-interpreter">Dream Interpretation</Link><Link href="/dream-dictionary">Dream Dictionary</Link><Link href="/dream-library">Dream Library</Link><Link href="/common-dreams">Common Dreams</Link></div><div className="footer-column"><b>Your practice</b><Link href="/dream-journal">Dream Journal</Link><Link href="/dream-patterns">Dream Patterns</Link><Link href="/dream-dna">Dream DNA</Link><Link href="/dream-coach">Ayla Dream Guide</Link></div><div className="footer-column"><b>Trust &amp; support</b><Link href="/about">Our Method</Link><Link href="/editorial-policy">Editorial Policy</Link><Link href="/contact">Contact</Link><Link href="/privacy">Privacy</Link><Link href="/cookie-policy">Cookie Policy</Link><Link href="/terms">Terms</Link><CookieSettingsButton /></div></div>
     <div className="shell footer-bottom"><span>© {new Date().getFullYear()} DreamAyla</span><span>Dream interpretation is for reflection and entertainment, not prediction or diagnosis.</span></div>
   </footer>;
 }
