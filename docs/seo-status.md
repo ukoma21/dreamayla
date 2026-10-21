@@ -24,7 +24,7 @@ Primary market: United States, English
 - Preserved reciprocal topic paths and direct Interpreter access; no thin child URL was created.
 - Lint and the 171-route production build passed. Private GitHub commit `81afa6f43f6ef645dc32baed03258c9733d792e0` deployed through Vercel.
 - Public checks passed for the updated title/H1, self-canonical, FAQ/Breadcrumb schema, related links, sitemap inclusion, and `lastmod` 2026-10-21.
-- A distinct X exposure post is prepared and awaiting the final public-post confirmation.
+- Published and verified a distinct X exposure post with one canonical destination: `https://x.com/Liam_Harrison9/status/2112798697574834181`.
 
 ## Completed on Oct 20
 
