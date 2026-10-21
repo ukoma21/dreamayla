@@ -1,6 +1,6 @@
 # DreamAyla SEO status
 
-Last updated: 2026-10-20  
+Last updated: 2026-10-21  
 Automation: `DreamAyla 每日全链路 SEO` — active, scheduled daily at 09:00 Asia/Shanghai  
 Primary market: United States, English
 
@@ -16,6 +16,16 @@ Primary market: United States, English
 | Month-two roadmap | Prepared for 2026-10-30 through 2026-11-28; Semrush and Ahrefs evidence recorded |
 | Daily evidence logs | Stored in `docs/seo-log/YYYY-MM-DD.md` |
 
+## Completed on Oct 21
+
+- Search Console now shows **1 click, 1,740 impressions, 0.1% CTR, and average position 49.4** for 28 days. The latest 7 days gained impressions from 480 to 569 (+18.5%) and improved average position from 55.0 to 51.2, while clicks remained at 0.
+- Upgraded `/dream-dictionary/dreaming-about-someone` around the verified same-person cluster: 1,300 US / KD 21 primary phrase, 390 / KD 23 repeated-dream variant, 260 / KD 23 romantic variant, and 140 / KD 19 crush question.
+- Consolidated every variant into one canonical and added answer-first coverage for nightly repetition, romantic dreams, a crush, someone from the past, an old acquaintance, and the `are they thinking of you` belief check.
+- Preserved reciprocal topic paths and direct Interpreter access; no thin child URL was created.
+- Lint and the 171-route production build passed. Private GitHub commit `81afa6f43f6ef645dc32baed03258c9733d792e0` deployed through Vercel.
+- Public checks passed for the updated title/H1, self-canonical, FAQ/Breadcrumb schema, related links, sitemap inclusion, and `lastmod` 2026-10-21.
+- A distinct X exposure post is prepared and awaiting the final public-post confirmation.
+
 ## Completed on Oct 20
 
 - Refreshed the authenticated 28-day Search Console report through Oct 17: **1 click, 1,720 impressions, 0.1% CTR, and average position 49.0**. Compared with the last verified 1,610-impression snapshot, impressions increased by 110 (+6.8%), clicks remained flat, and the 0.4-position movement is treated as normal broad-query expansion rather than a proven ranking trend.
@@ -26,6 +36,11 @@ Primary market: United States, English
 - Public verification passed for HTTP 200, title and description, self-canonical, `index, follow`, FAQ/Breadcrumb schema, internal links, robots, and a single sitemap entry with `lastmod` 2026-10-20.
 - Requested indexing once in Search Console. Google confirmed that the URL was added to the priority crawl queue; do not submit it again unless its indexing status materially changes.
 - Published an original, AI-disclosed Pinterest Pin with accessible alt text and one tracked destination to the Nightmare canonical: `https://www.pinterest.com/pin/1149543873670009562/`.
+- Completed a second demand-led keyword refresh based on the two supplied SEO articles, authenticated Semrush US data, Google Trends, Google/YouTube suggestions, live results, and current Search Console signals. The full 20-query mapping is in `docs/seo-keyword-refresh-2026-10-20-article-method.md`.
+- Re-ranked the next work around existing canonicals rather than more URL growth: Dreaming About Someone (`why do i keep dreaming about the same person`, 1,300 / KD 21), Car Crash (590 / KD 25), Being Chased (best visible question 480 / KD 29; easier variant 210 / KD 17), Teeth Falling Out (480 / KD 26 question form), Losing Hair (visible variants from KD 16–30), Death/deceased person, and AI Dream Interpreter (1,000 / KD 38).
+- Removed Missing a Train from the main growth queue after the current Semrush exact seed returned only 20 US searches and no KD. Its page remains useful for existing first-party impressions and should stay stable.
+- Ahrefs fresh values remain unavailable because the public generator stopped at human verification; no CAPTCHA was bypassed and no metric was invented.
+- Added a daily demand-and-interest decision engine to the SEO playbook. Every run now compares Search Console queries and pages across 7-day and 28-day windows, checks available website landing-page interest separately, validates the strongest user-shaped phrases in current tools and live results, scores candidates, and lets verified user interest override the static roadmap.
 
 ## Completed on Oct 17
 
@@ -219,12 +234,12 @@ Primary market: United States, English
 
 ## Next execution
 
-Date: 2026-10-21
+Date: 2026-10-22
 
-1. Validate `lucid dream meaning`, `what is a lucid dream`, and `how to lucid dream` intent without competing with the existing Dream Interpreter; prefer one educational canonical only if live results show a distinct information need.
-2. Recheck Car Crash and Being Chased as first-party near-win candidates; upgrade the stronger current opportunity if Lucid Dream lacks clear differentiation or safe scope.
-3. Review Nightmare discovery and sitemap recognition without repeating its Search Console request.
-4. Keep Trapped and Missing a Train stable long enough to measure their recent snippet changes.
+1. Upgrade `/dream-dictionary/car-crash` for `car crash dream meaning` (590 US / KD 25), `what do car crashes in dreams mean` (320 / KD 22), and the someone-else-driving scenario (210 / KD 18), all on one canonical.
+2. Then upgrade Being Chased using its verified question forms while checking the legacy `/dreams/being-chased` migration.
+3. Review the same-person page's discovery without repeating an indexing request solely for a copy update.
+4. Keep Trapped and Missing a Train stable unless first-party data materially changes.
 
 ## Month-two research prepared on Oct 9
 
