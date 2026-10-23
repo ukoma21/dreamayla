@@ -1,6 +1,6 @@
 # DreamAyla SEO status
 
-Last updated: 2026-10-22  
+Last updated: 2026-10-23  
 Automation: `DreamAyla 每日全链路 SEO` — active, scheduled daily at 09:00 Asia/Shanghai  
 Primary market: United States, English
 
@@ -8,13 +8,26 @@ Primary market: United States, English
 
 | Item | Status |
 |---|---|
-| Canonical Dream Dictionary guides | 39 live guides; Car Crash now owns the car-crash, someone-else-driving, passenger, failed-brakes, survival, and spiritual-belief-check variants on one canonical; Nightmare and Recurring Dreams remain distinct; Missing a Train and Trapped remain in observation windows |
+| Canonical Dream Dictionary guides | 39 live guides; Being Chased now owns the direct-question, stranger, familiar-person, authority, animal, hiding, unable-to-run, escape, and recurring-chase variants on one canonical; Car Crash remains stable; Missing a Train and Trapped remain in observation windows |
 | Dictionary collection schema | Live; automatically lists all canonical guides |
 | Legacy duplicate handling | Matching legacy `/dreams/` pages use `noindex, follow`, canonical to the Dictionary guide, and are excluded from the sitemap |
 | Sitemap | Live and automatically includes published Dictionary entries |
 | Daily execution roadmap | Active from 2026-09-26 through 2026-10-29 |
 | Month-two roadmap | Prepared for 2026-10-30 through 2026-11-28; Semrush and Ahrefs evidence recorded |
 | Daily evidence logs | Stored in `docs/seo-log/YYYY-MM-DD.md` |
+
+## Completed on Oct 23
+
+- Search Console now shows **1 click, 1,837 impressions, 0.1% CTR, and average position 50.5** for the latest 28 days, versus 0 clicks, 324 impressions, 0% CTR, and position 48.7 in the preceding 28 days.
+- The latest 7 days reached **652 impressions versus 508 (+28.3%)** and average position improved from 54.7 to 53.9, while clicks remained at 0.
+- The legacy Being Chased URL rose from 22 to 136 impressions over the 28-day comparison, but its position moved from 43.9 to 66.7. It remains noindex with the canonical assigned to the Dictionary guide, so no duplicate URL was created.
+- Metricool separately recorded 36 page views, 22 visits, and 22 visitors for Oct 16–22 versus 26 page views, 21 visits, and 18 visitors for Oct 9–15; current sources were 35 Direct and 1 google.com session.
+- Upgraded `/dream-dictionary/being-chased` around the authenticated Semrush US cluster: 480 / KD 29 primary question, 210 / KD 17 direct meaning variant, and 210 / KD 27 alternate question.
+- Expanded the single canonical with stranger, known person, police/authority, animal, hiding, unable-to-run, escape/capture, and recurring-chase scenarios while retaining non-prediction, trauma-aware, and sleep-support boundaries.
+- Lint and the isolated 171-route production build passed. Private GitHub commit `ac887bf77f5f1614471937332394103b9968212e` deployed through Vercel deployment `dpl_5wWjf35PK5nMDFwHajphvdxmJfGQ`, which is READY.
+- Public checks passed for HTTP 200, updated metadata and answer-first H1, self-canonical, index/follow, WebPage/FAQ/Breadcrumb schema, related links, Interpreter/Journal paths, legacy noindex/canonical handling, sitemap de-duplication, and `lastmod` 2026-10-23.
+- Did not repeat a Search Console indexing request for this existing canonical.
+- Published and verified a distinct Pinterest exposure item with one tracked canonical destination and accessible alt text: https://www.pinterest.es/pin/1149543873670305987
 
 ## Completed on Oct 22
 
@@ -245,12 +258,12 @@ Primary market: United States, English
 
 ## Next execution
 
-Date: 2026-10-23
+Date: 2026-10-24
 
-1. Upgrade `/dream-dictionary/being-chased` around `what does being chased in a dream mean` (480 US / KD 29), `being chased in a dream meaning` (210 / KD 17), and `what do dreams of being chased mean` (210 / KD 27).
-2. Verify the legacy `/dreams/being-chased` canonical/noindex migration and sitemap de-duplication before changing copy.
-3. Keep Car Crash stable for a comparable observation window and do not repeat its Pinterest exposure or indexing request.
-4. Use the next fresh Search Console query/page export to choose Teeth Falling Out or Losing Hair as the following near-win.
+1. Refresh Search Console Queries and Pages first; choose between Losing Hair and Teeth Falling Out from current impressions, position, and CTR rather than from the calendar alone.
+2. Losing Hair currently has stronger first-party page evidence (110 impressions over 28 days and 50 in the latest 7 days); Teeth Falling Out retains clearer verified third-party demand. Upgrade only the higher-scoring owner page.
+3. Keep Being Chased and Car Crash stable for a comparable recrawl window. Do not repeat their Pinterest posts or indexing requests.
+4. Continue monitoring legacy `/dreams/` impressions and canonical migration, and prioritize a true position-4–20 CTR opportunity when one has enough impressions.
 
 ## Month-two research prepared on Oct 9
 
