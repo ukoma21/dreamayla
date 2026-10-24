@@ -1,6 +1,6 @@
 # DreamAyla SEO status
 
-Last updated: 2026-10-23  
+Last updated: 2026-10-24  
 Automation: `DreamAyla 每日全链路 SEO` — active, scheduled daily at 09:00 Asia/Shanghai  
 Primary market: United States, English
 
@@ -8,13 +8,25 @@ Primary market: United States, English
 
 | Item | Status |
 |---|---|
-| Canonical Dream Dictionary guides | 39 live guides; Being Chased now owns the direct-question, stranger, familiar-person, authority, animal, hiding, unable-to-run, escape, and recurring-chase variants on one canonical; Car Crash remains stable; Missing a Train and Trapped remain in observation windows |
+| Canonical Dream Dictionary guides | 39 live guides; Flood now owns house-flooding, rising-water, escape, clear/muddy-water, approaching-flood, and recurring-flood language on one canonical; Being Chased and Car Crash remain stable; Missing a Train and Trapped remain in observation windows |
 | Dictionary collection schema | Live; automatically lists all canonical guides |
 | Legacy duplicate handling | Matching legacy `/dreams/` pages use `noindex, follow`, canonical to the Dictionary guide, and are excluded from the sitemap |
 | Sitemap | Live and automatically includes published Dictionary entries |
 | Daily execution roadmap | Active from 2026-09-26 through 2026-10-29 |
 | Month-two roadmap | Prepared for 2026-10-30 through 2026-11-28; Semrush and Ahrefs evidence recorded |
 | Daily evidence logs | Stored in `docs/seo-log/YYYY-MM-DD.md` |
+
+## Completed on Oct 24
+
+- Search Console highlighted `/dream-dictionary/flood` at **+5,400% impressions**; the latest recorded seven-day page comparison was 55 versus 1 impression, at average position 59.6. Metricool separately recorded Flood as the strongest measured Dictionary landing page with 10 views.
+- Selected Flood at **70/100** from today's candidate set because Google discovery, on-site interest, and the owner's explicit growth request aligned. Losing Hair remains next at 68/100; Teeth Falling Out remains at 66/100.
+- Live result research consolidated house flooding, floor/basement water, roof leaks and heavy rain, flooded streets, escape/survival, being swept away, clear/muddy water, approaching floods, and recurring floods on the existing Flood canonical. Fresh third-party numeric metrics remain unverified.
+- Reworked the Flood title, description, H1, answer-first opening, semantic cluster, and ten scenario answers; added careful real-disaster/support boundaries and a Recurring Dreams path without creating any thin child URL.
+- Verified reciprocal internal discovery from Water, Ocean, Drowning, House, and Tornado, plus direct Interpreter and Journal paths.
+- Private GitHub commit `e798f2ea58253cbe2955f3825e87accdf016200d` deployed the content expansion. Production checks passed for HTTP 200, updated metadata/content, self-canonical, index/follow, structured data, sitemap, robots, and `lastmod` 2026-10-24.
+- The legacy audit found `/dreams/flood` still self-canonical. Commit `5498bd9c709d16051d661f06b594516948e5bd99` added it to the legacy canonical map and Vercel reported success, but the public route still served cached pre-fix metadata during the final verification. Recheck before declaring the migration complete.
+- Did not repeat a Search Console indexing request for the existing Flood canonical.
+- A distinct X post was prepared, but macOS blocked browser keystroke automation and the Metricool connector was unavailable. No public URL exists, so today's external action remains blocked and is not counted as a backlink. The Oct 15 Flood Pin was not duplicated.
 
 ## Completed on Oct 23
 
