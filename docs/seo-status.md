@@ -24,7 +24,7 @@ Primary market: United States, English
 - Reworked the Flood title, description, H1, answer-first opening, semantic cluster, and ten scenario answers; added careful real-disaster/support boundaries and a Recurring Dreams path without creating any thin child URL.
 - Verified reciprocal internal discovery from Water, Ocean, Drowning, House, and Tornado, plus direct Interpreter and Journal paths.
 - Private GitHub commit `e798f2ea58253cbe2955f3825e87accdf016200d` deployed the content expansion. Production checks passed for HTTP 200, updated metadata/content, self-canonical, index/follow, structured data, sitemap, robots, and `lastmod` 2026-10-24.
-- The legacy audit found `/dreams/flood` still self-canonical. Commit `5498bd9c709d16051d661f06b594516948e5bd99` added it to the legacy canonical map and Vercel reported success, but the public route still served cached pre-fix metadata during the final verification. Recheck before declaring the migration complete.
+- The legacy audit found `/dreams/flood` self-canonical because the public route is rewritten through `/dream-detail/[slug]`. After tracing the mismatch, commit `3d7f99d79ded7db3ca90c82c81551103bc00ab45` fixed the actual route. Vercel reported success and public verification now confirms `noindex, follow` plus canonical ownership by `/dream-dictionary/flood`.
 - Did not repeat a Search Console indexing request for the existing Flood canonical.
 - A distinct X post was prepared, but macOS blocked browser keystroke automation and the Metricool connector was unavailable. No public URL exists, so today's external action remains blocked and is not counted as a backlink. The Oct 15 Flood Pin was not duplicated.
 
